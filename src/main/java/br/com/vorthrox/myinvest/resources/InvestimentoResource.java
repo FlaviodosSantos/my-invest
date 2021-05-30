@@ -32,7 +32,7 @@ public class InvestimentoResource {
 		return investimentoRepository.findById(codigo).orElse(null);
 	}
 	
-	@DeleteMapping
+	@DeleteMapping("/{codigo}")
 	public void remover(@PathVariable Long codigo) {
 		investimentoRepository.deleteById(codigo);
 	}
